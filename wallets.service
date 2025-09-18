@@ -1,0 +1,12 @@
+[Unit]
+Description=Run 10 walletgpu instances in detached screens at startup
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/home/yourusername/path/to/walletgpu
+ExecStart=/home/yourusername/path/to/start_wallets.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
